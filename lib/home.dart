@@ -20,17 +20,35 @@ class _MyHomePageState extends State<MyHomePage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
-              Hero(
-                tag: 'image',
-                child: SizedBox(
-                  height: 300,
-                  width: 300,
-                  child: SvgPicture.asset(
-                    'assets/icons/sad.svg',
-                  ),
+              SizedBox(
+                height: 200,
+                width: 200,
+                child: SvgPicture.asset(
+                  'assets/icons/sad.svg',
                 ),
               ),
-              const Text("HAHAHAHAs"),
+              const SizedBox(
+                height: 20,
+              ),
+              Wrap(
+                children: [
+                  Transform.rotate(
+                    angle: 100,
+                    child: const Text(
+                      'You',
+                      style: TextStyle(
+                        fontSize: 40,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                  const Text('are'),
+                  const Text('on'),
+                  const Text('the'),
+                  const Text('wrong'),
+                  const Text('screen'),
+                ],
+              )
             ],
           ),
         ),

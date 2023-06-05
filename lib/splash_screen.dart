@@ -2,7 +2,7 @@ import 'package:custom_animation_app/home.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-const maxSize = 300;
+const maxSize = 200;
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -46,12 +46,12 @@ class _SplashScreenState extends State<SplashScreen> {
     }
     await Future.delayed(const Duration(milliseconds: 10));
     setState(() {
-      _width += 5;
-      _height += 5;
-      _angle += 0.4;
+      _width += 2;
+      _height += 2;
+      _angle += 0.45;
       _top = _top == null
-          ? MediaQuery.of(context).size.height / 2 - 56
-          : _top! - 6;
+          ? MediaQuery.of(context).size.height / 2 - 55
+          : _top! - 5;
     });
 
     if (_longPress) {
@@ -79,8 +79,6 @@ class _SplashScreenState extends State<SplashScreen> {
           onLongPressEnd: (_) {
             setState(() {
               _longPress = false;
-              _width = 100;
-              _height = 100;
             });
           },
           child: AnimatedSwitcher(
