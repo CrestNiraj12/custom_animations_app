@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/physics.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -10,7 +11,38 @@ class MyHomePage extends StatefulWidget {
   State<MyHomePage> createState() => _MyHomePageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _MyHomePageState extends State<MyHomePage>
+    with SingleTickerProviderStateMixin {
+  late AnimationController _controller;
+  late SpringSimulation simulation;
+
+  @override
+  void initState() {
+    super.initState();
+    _controller = AnimationController(
+      vsync: this,
+    );
+
+    simulation = SpringSimulation(
+      const SpringDescription(
+        mass: 0.2,
+        stiffness: 10,
+        damping: 0.5,
+      ),
+      1.0, // starting point
+      10.0, // ending point
+      1, // velocity
+    );
+
+    _controller.animateWith(simulation);
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,25 +60,37 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
               const SizedBox(
-                height: 20,
+                height: 100,
               ),
-              Wrap(
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Transform.rotate(
-                    angle: 100,
+                  AnimatedBuilder(
+                    animation: _controller,
+                    builder: (_, child) {
+                      return Transform.rotate(
+                        angle: _controller.value,
+                        child: child,
+                      );
+                    },
                     child: const Text(
                       'You',
                       style: TextStyle(
-                        fontSize: 40,
+                        fontSize: 30,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
                   ),
-                  const Text('are'),
-                  const Text('on'),
-                  const Text('the'),
-                  const Text('wrong'),
-                  const Text('screen'),
+                  const SizedBox(
+                    width: 10,
+                  ),
+                  const Text(
+                    'are on the wrong screen',
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
                 ],
               )
             ],
