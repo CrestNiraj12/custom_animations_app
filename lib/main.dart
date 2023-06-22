@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:custom_animation_app/splash_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -19,5 +21,9 @@ class MyApp extends StatelessWidget {
       ),
       home: const SplashScreen(),
     );
+  }
+
+  void hahaTestPR() {
+    log('test');
   }
 }
