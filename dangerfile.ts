@@ -8,7 +8,7 @@ function checkIsBodyEmpty() {
 }
 
 function checkPRSize() {
-    const maxLinesOfCode = 1000
+    const maxLinesOfCode = 50
     const linesOfCode = danger.github.pr.additions + danger.github.pr.deletions
     if (linesOfCode > maxLinesOfCode) {
         fail(`This pull request adds too many lines of code. It adds ${linesOfCode} lines, but the maximum allowed is ${maxLinesOfCode} lines.`)
