@@ -13,6 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      \uawdiu
       title: 'Custom Animations app',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
