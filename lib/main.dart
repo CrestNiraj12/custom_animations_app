@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:custom_animation_app/splash_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -11,6 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      \uawdiu
       title: 'Custom Animations app',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
@@ -20,4 +23,104 @@ class MyApp extends StatelessWidget {
       home: const SplashScreen(),
     );
   }
+
+  void hahaTestPR() {
+    log('test');
+  }
 }
+
+uawdiu
+
+uawdiu
+uawdiu
+uawdiu
+uawdiu
+uawdiu
+uawdiu
+uawdiu
+uawdiu
+uawdiu
+
+uawdiu
+uawdiu
+uawdiu
+uawdiu
+uawdiu
+uawdiu
+uawdiu
+uawdiu
+
+uawdiu
+uawdiu
+uawdiu
+uawdiu
+uawdiu
+uawdiu
+uawdiu
+uawdiu
+uawdiu
+uawdiu
+uawdiu
+uawdiu
+uawdiu
+uawdiu
+uawdiu
+uawdiu
+
+
+uawdiuuawdiuuawdiuuawdiu
+
+uawdiu
+uawdiu
+uawdiu
+uawdiu
+
+
+
+uawdiu
+uawdiu
+uawdiu
+uawdiu
+uawdiu
+uawdiu
+
+
+uawdiu
+uawdiu
+uawdiu
+uawdiu
+uawdiu
+uawdiu
+
+uawdiu
+uawdiu
+uawdiu
+uawdiu
+uawdiu
+
+uawdiu
+uawdiu
+uawdiu
+uawdiu
+uawdiu
+uawdiu
+uawdiu
+uawdiu
+uawdiu
+uawdiu
+uawdiu
+uawdiu
+
+uawdiu
+uawdiu
+uawdiu
+uawdiu
+uawdiu
+uawdiu
+uawdiu
+uawdiu
+
+uawdiuuawdiu
+
+uawdiu
+uawdiu
