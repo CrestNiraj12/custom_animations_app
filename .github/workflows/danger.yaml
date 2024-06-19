@@ -20,6 +20,7 @@ jobs:
                   export PATH="${PATH}:$HOME/flutter/bin"
                   cd $GITHUB_WORKSPACE
                   flutter pub get
+                  flutter analyze
                   npm install --global yarn
                   yarn add danger --dev
                   yarn danger ci
