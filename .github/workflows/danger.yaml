@@ -6,6 +6,9 @@ jobs:
         name: PR Checks
         runs-on: ubuntu-latest
         steps:
+            - name: Check ENV_FILE secret
+              run: echo "${{ secrets.ENV_FILE }}" || echo "ENV_FILE secret not found"
+
             - name: Create .env file
               run: |
                   echo "${{ secrets.ENV_FILE }}" > $GITHUB_WORKSPACE/.env
