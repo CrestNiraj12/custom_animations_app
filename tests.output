@@ -1,0 +1,13 @@
+00:00 +0: loading /Users/niraj.shrestha/Documents/custom_animation_app/—                                                                                                                               00:00 +0 -1: loading /Users/niraj.shrestha/Documents/custom_animation_app/— [E]                                                                                                                        
+  Failed to load "/Users/niraj.shrestha/Documents/custom_animation_app/—": Does not exist.
+
+To run this test again: /Users/niraj.shrestha/Documents/flutter/bin/cache/dart-sdk/bin/dart test /Users/niraj.shrestha/Documents/custom_animation_app/— -p vm --plain-name 'loading /Users/niraj.shrestha/Documents/custom_animation_app/—'
+00:00 +0 -2: loading /Users/niraj.shrestha/Documents/custom_animation_app/machine [E]                                                                                                                  
+  Failed to load "/Users/niraj.shrestha/Documents/custom_animation_app/machine": Does not exist.
+
+To run this test again: /Users/niraj.shrestha/Documents/flutter/bin/cache/dart-sdk/bin/dart test /Users/niraj.shrestha/Documents/custom_animation_app/machine -p vm --plain-name 'loading /Users/niraj.shrestha/Documents/custom_animation_app/machine'
+00:00 +0 -3: loading /Users/niraj.shrestha/Documents/custom_animation_app/coverage [E]                                                                                                                 
+  Failed to load "/Users/niraj.shrestha/Documents/custom_animation_app/coverage": Does not exist.
+
+To run this test again: /Users/niraj.shrestha/Documents/flutter/bin/cache/dart-sdk/bin/dart test /Users/niraj.shrestha/Documents/custom_animation_app/coverage -p vm --plain-name 'loading /Users/niraj.shrestha/Documents/custom_animation_app/coverage'
+00:00 +0 -3: Some tests failed.                                                                                                                                                                        
