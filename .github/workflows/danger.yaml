@@ -7,7 +7,9 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Create .env file
-              run: echo "${{ secrets.ENV_FILE }}" > $GITHUB_WORKSPACE/.env
+              run: |
+                  echo "${{ secrets.ENV_FILE }}" > $GITHUB_WORKSPACE/.env
+                  ls -a $GITHUB_WORKSPACE
 
             - uses: actions/checkout@v1
             - name: Run Danger
