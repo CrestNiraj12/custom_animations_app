@@ -21,7 +21,7 @@ function runFlutterAnalyzer() {
     const lines = analyzeOutput.split('\n');
     const issueRegex = /^(info|warning|error) • (.+) • (.+) • (.+)$/;
 
-    lines.forEach((line: string) => {
+    lines.forEach((line) => {
       const match = line.match(issueRegex);
       if (match) {
         const [_, level, msg, file, location] = match;
