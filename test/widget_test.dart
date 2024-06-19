@@ -13,4 +13,9 @@ void main() {
     // Build our app and trigger a frame.
     await tester.pumpWidget(const MyApp());
   });
+
+  testWidgets('Home', (WidgetTester tester) async {
+    // Build our app and trigger a frame.
+    await tester.pumpWidget(const MyApp());
+  });
 }

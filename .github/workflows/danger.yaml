@@ -6,8 +6,6 @@ jobs:
         name: PR Checks
         runs-on: ubuntu-latest
         steps:
-            - name: Create .env file
-              run: echo "${{ secrets.ENV_FILE }}" > .env
             - uses: actions/checkout@v1
             - name: Run Danger
               run: |
@@ -16,7 +14,10 @@ jobs:
                   tar xf flutter.tar.xz
                   export PATH="${PATH}:$HOME/flutter/bin"
                   cd $GITHUB_WORKSPACE
+                  echo "${{ secrets.ENV_FILE }}" > .env
                   flutter pub get
+                  ls -a
+                  flutter analyze
                   npm install --global yarn
                   yarn add danger --dev
                   yarn danger ci

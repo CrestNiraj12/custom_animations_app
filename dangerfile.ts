@@ -17,7 +17,7 @@ function checkPRSize() {
 
 function runFlutterAnalyzer() {
   try {
-    child_process.execSync('flutter analyze', { encoding: 'utf-8' });
+    child_process.execSync('flutter analyze');
   } catch (error) {
     fail(`Flutter analyzer failed. Please fix the issues reported by the analyzer. ${error}`)
   }
