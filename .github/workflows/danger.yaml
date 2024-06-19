@@ -7,9 +7,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Create .env file
-              run: |
-                  echo "${{ secrets.ENV_FILE }}" > $GITHUB_WORKSPACE/.env
-                  ls -a $GITHUB_WORKSPACE
+              run: echo "${{ secrets.ENV_FILE }}" > $GITHUB_WORKSPACE/.env
 
             - uses: actions/checkout@v1
             - name: Run Danger
@@ -20,6 +18,7 @@ jobs:
                   export PATH="${PATH}:$HOME/flutter/bin"
                   cd $GITHUB_WORKSPACE
                   flutter pub get
+                  ls -a
                   flutter analyze
                   npm install --global yarn
                   yarn add danger --dev
