@@ -8,9 +8,9 @@ jobs:
         steps:
             - name: Create .env file
               run: |
-                  echo "${{ secrets.ENV_FILE }}" > .env
+                  echo "${{ secrets.ENV_FILE }}" > $GITHUB_WORKSPACE/.env
                   echo "Contents of .env file:"
-                  cat .env
+                  cat $GITHUB_WORKSPACE/.env
 
             - uses: actions/checkout@v1
             - name: Run Danger
