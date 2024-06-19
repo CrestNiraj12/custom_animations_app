@@ -16,8 +16,10 @@ function checkPRSize() {
 }
 
 function runFlutterAnalyzer() {
+  const analyzeOutput = child_process.execSync('flutter analyze', { encoding: 'utf-8' });
+  warn(analyzeOutput);
+
   try {
-    const analyzeOutput = child_process.execSync('flutter analyze', { encoding: 'utf-8' });
     const lines = analyzeOutput.split('\n');
     // const issueRegex = /^(info|warning|error) • (.+) • (.+) • (.+)$/;
 
