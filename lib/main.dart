@@ -1,6 +1,5 @@
 import 'dart:developer';
 
-import 'package:custom_animation_app/splash_screen.dart';
 import 'package:custom_animation_app/test_permission.dart';
 import 'package:flutter/material.dart';
 
